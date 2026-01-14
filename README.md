@@ -11,8 +11,12 @@
 本專案採用 **Accountability Formula 4.0**，將人才價值分為「基本盤」（乘法）與「增值盤」（加法）：
 
 $$
-\text{總分} = (\underbrace{\text{釐清}\% \times \text{執行}\%}_{\text{基本盤}}) \times 200 + \underbrace{(\text{作法改善}\% \times 100) + (\text{超越目標}\% \times 100)}_{\text{增值盤}} + \text{風險補償}
+Total = (\underbrace{Clarify\% \times Execute\%}_{Base}) \times 200 + \underbrace{(SOP\% \times 100) + (Beyond\% \times 100)}_{ValueAdd} + Risk(0-20)
 $$
+
+> 註：GitHub 對複雜 LaTeX 支援度有限，若上方公式無法完整呈現，請參考下方純文字版：
+>
+> **總分 = (釐清% × 執行%) × 200 + (作法改善% × 100 + 超越目標% × 100) + 風險補償**
 
 - **基本盤 (Extrinsic)**：釐清目標 x 完美執行。兩者缺一不可（乘法效應），這是職責的體現。
 - **增值盤 (Intrinsic)**：建立 SOP、自動化流程、或提出戰略洞察。這是個人價值的體現（加法效應）。
