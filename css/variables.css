@@ -1,0 +1,11 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --accent-color: #0984e3;
+    --accent-light: #74b9ff;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+    --font-main: 'Inter', 'Noto Sans TC', sans-serif;
+}

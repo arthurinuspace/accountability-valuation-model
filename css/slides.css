@@ -1,0 +1,551 @@
+/* Slide 3: Formula */
+.formula-container {
+    margin: 3rem 0;
+    text-align: center;
+    background: #2d3436; /* Dark background like the image */
+    padding: 2.5rem 1rem;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.math-equation {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 2rem; /* Space for annotations */
+}
+
+.term-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.math-content {
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+.curly-brace {
+    width: 100%;
+    height: 10px;
+    border-bottom: 2px solid #74b9ff;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    position: relative;
+    margin-top: 5px;
+}
+
+.curly-brace::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #74b9ff;
+}
+
+.annotation {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 0.85rem;
+    color: #b2bec3;
+    margin-top: 1rem;
+    white-space: nowrap;
+}
+
+.operator {
+    align-self: flex-start;
+    margin-top: 0.2rem; /* Align with text */
+    color: #fab1a0;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .math-equation { font-size: 1.1rem; }
+    .annotation { font-size: 0.7rem; white-space: normal; }
+}
+
+.caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.feature-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Slide 4: Check List & Guidebook */
+.check-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.check-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.check-list li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.mock-guidebook {
+    background: var(--bg-color);
+    padding: 0;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    width: 100%;
+    overflow: hidden;
+}
+
+.guide-header {
+    background: var(--text-primary);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.guide-row {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #dfe6e9;
+    align-items: center;
+}
+
+.guide-row.highlight {
+    background: #eef6fc;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--accent-color);
+    width: 50px;
+    flex-shrink: 0;
+}
+
+/* Slide 5: Matrix */
+.matrix-placeholder {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #b2bec3;
+    position: relative;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.axis-y {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: rotate(-90deg) translateX(50%);
+    font-size: 0.8rem;
+    color: #636e72;
+    letter-spacing: 2px;
+}
+
+.axis-x {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #636e72;
+    letter-spacing: 2px;
+}
+
+.quadrant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border: 1px solid #f1f2f6;
+}
+
+.quadrant.q1 { background: #e3f2fd; color: var(--accent-color); }
+.quadrant small { font-size: 0.7rem; font-weight: normal; margin-top: 4px; }
+
+.dialogue-list {
+    list-style: none;
+}
+.dialogue-list li {
+    padding: 0.5rem;
+    background: #f1f2f6;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Slide 6: L&D Cards */
+.cards-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-row {
+    display: flex;
+    align-items: stretch;
+    background: white;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.condition {
+    background: var(--text-primary);
+    color: white;
+    padding: 1.5rem;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.action {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.conclusion-box {
+    text-align: center;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Slide 7: HR Roles */
+.roles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.role-card {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+.role-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.role-zh {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.role-desc {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .roles-container {
+        grid-template-columns: 1fr;
+    }
+    .role-card { padding: 1.5rem; }
+}
+
+/* Slide 8: Roadmap */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dfe6e9;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 2rem;
+}
+
+.time-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--text-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.time-content p {
+    margin: 0;
+}
+
+/* Slide 8: Financial ROI */
+.roi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.roi-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border-top: 5px solid #bdc3c7;
+}
+
+.roi-card.waste { border-top-color: #fab1a0; }
+.roi-card.asset { border-top-color: #55efc4; }
+.roi-card.risk { border-top-color: #74b9ff; }
+
+.roi-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.roi-formula {
+    font-family: monospace;
+    background: #dfe6e9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.roi-insight {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Slide 9: Data Strategy */
+.charts-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.chart-concept {
+    background: white;
+    border: 1px solid #dfe6e9;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.chart-placeholder {
+    height: 150px;
+    background: #f1f2f6;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b2bec3;
+    font-size: 2rem;
+}
+
+.chart-desc h3 {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.chart-desc p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .roi-container, .charts-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Slide 9: Mockup Charts CSS */
+.chart-placeholder {
+    height: auto;
+    min-height: 180px;
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Chart A: Misalignment */
+.bar-group {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    height: 120px;
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bar {
+    width: 40px;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s;
+    position: relative;
+}
+
+.bar.execution { height: 100px; background: #dfe6e9; }
+.bar.clarity { height: 50px; background: #2d3436; }
+.bar.waste { 
+    height: 50px; 
+    background: repeating-linear-gradient(
+      45deg,
+      #ff7675,
+      #ff7675 10px,
+      #fab1a0 10px,
+      #fab1a0 20px
+    );
+    opacity: 0.8;
+}
+
+.bar-label {
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+/* Chart B: Value Trend */
+.trend-container {
+    width: 100%;
+    height: 120px;
+
+/* Slide 11: Calculator */
+.calc-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.calc-inputs {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.result-card {
+    background: white;
+    border: 2px solid #dfe6e9;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.total-score {
+    font-size: 5rem;
+    font-weight: 800;
+    display: block;
+    margin: 1rem 0;
+}
+
+.total-score.score-high { color: #00b894; }
+.total-score.score-mid { color: #0984e3; }
+.total-score.score-low { color: #fdcb6e; }
+.total-score.score-bad { color: #d63031; }
+
+.calc-category {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.calc-note {
+    font-size: 0.9rem;
+    color: #b2bec3;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .calc-layout {
+        grid-template-columns: 1fr;
+    }
+}
+

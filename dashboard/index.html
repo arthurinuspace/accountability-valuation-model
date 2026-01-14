@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountability 4.0 Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">HR Analytics</div>
+            <nav>
+                <button class="nav-item active" data-tab="individual">
+                    👤 個人層級
+                </button>
+                <button class="nav-item" data-tab="team">
+                    👥 團隊層級
+                </button>
+                <button class="nav-item" data-tab="org">
+                    🏢 組織層級
+                </button>
+                <div class="separator"></div>
+                <a href="../index.html" class="nav-item back-btn">
+                    ← 返回簡報
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- View 1: Individual -->
+            <div id="view-individual" class="view active">
+                <header>
+                    <h1>個人價值解析</h1>
+                    <p class="subtitle">員工：Arthur Dent (資深工程師)</p>
+                </header>
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>當責五維雷達圖</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartRadar"></canvas>
+                        </div>
+                        <p class="insight">
+                            <strong>洞察：</strong>此員工呈現「執行型」特徵，基本盤穩固，但 SOP 與創新較弱。
+                        </p>
+                    </div>
+                    <div class="chart-card">
+                        <h3>價值組成趨勢</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartStack"></canvas>
+                        </div>
+                        <p class="insight">
+                            <strong>洞察：</strong>Q3 後開始累積資產 (Asset)，成長曲線顯著。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 2: Team -->
+            <div id="view-team" class="view">
+                <header>
+                    <h1>團隊人才盤點</h1>
+                    <p class="subtitle">部門：產品工程處</p>
+                </header>
+                <div class="charts-grid">
+                    <div class="chart-card wide">
+                        <h3>執行-創新 矩陣</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartMatrix"></canvas>
+                        </div>
+                        <p class="insight">
+                            <strong>洞察：</strong>目前右上角 (Captain) 稀缺，需從右下 (Soldier) 提拔或訓練。
+                        </p>
+                    </div>
+                    <!-- 
+                    <div class="chart-card">
+                        <h3>部門價值分佈 (Cross-Team Profile)</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartBar"></canvas>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+
+            <!-- View 3: Org -->
+            <div id="view-org" class="view">
+                <header>
+                    <h1>組織健康度</h1>
+                    <p class="subtitle">全公司關鍵指標</p>
+                </header>
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>組織資產累積</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartArea"></canvas>
+                        </div>
+                        <p class="insight">
+                            <strong>趨勢：</strong>SOP 總量持續上升，顯示知識正在沈澱。
+                        </p>
+                    </div>
+                    <div class="chart-card">
+                        <h3>目標失準代價</h3>
+                        <div class="canvas-container">
+                            <canvas id="chartWaterfall"></canvas>
+                        </div>
+                        <p class="insight">
+                            <strong>警告：</strong>Q2 瞎忙成本過高，需檢討策略溝通。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
