@@ -11,6 +11,33 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .cta-group {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+      .cta-btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+      .cta-btn:hover {
+        transform: translateY(-2px);
+      }
+      .cta-btn.primary {
+        background: #007bff;
+        color: white;
+      }
+      .cta-btn.secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
   </head>
   <body>
     <main id="presentation">
@@ -22,6 +49,10 @@
           <p class="subtitle">當責模型 4.0 如何升級人才管理系統</p>
           <div class="divider-small"></div>
           <p class="description">解決績效評估的主觀爭議，打造高密度人才組織</p>
+          <div class="cta-group">
+            <a href="calculator/index.html" class="cta-btn primary">開啟試算器 (Calculator)</a>
+            <a href="dashboard/index.html" class="cta-btn secondary">檢視看板 (Dashboard)</a>
+          </div>
         </div>
       </section>
 
