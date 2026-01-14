@@ -11,7 +11,7 @@
 本專案採用 **Accountability Formula 4.0**，將人才價值分為「基本盤」（乘法）與「增值盤」（加法）：
 
 $$
-Total = (\underbrace{Clarify\% \times Execute\%}_{Base}) \times 200 + \underbrace{(SOP\% \times 100) + (Beyond\% \times 100)}_{ValueAdd} + Risk(0-20)
+Total = (\underbrace{Clarify\\% \times Execute\\%}_{Base}) \times 200 + \underbrace{(SOP\\% \times 100) + (Beyond\\% \times 100)}_{ValueAdd} + Risk(0-20)
 $$
 
 > 註：GitHub 對複雜 LaTeX 支援度有限，若上方公式無法完整呈現，請參考下方純文字版：
